@@ -1,0 +1,328 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #1e1e1e 0%, #2a2a2a 100%);
+    color: #fff;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Navigation Styling */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background: #2a2a2a;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #4285f4;
+    text-shadow: 0 0 5px rgba(66, 133, 244, 0.3);
+}
+
+.logo i {
+    margin-right: 10px;
+    color: #ea4335;
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    background: #3a3a3a;
+    padding: 8px 15px;
+    border-radius: 30px;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.nav li {
+    margin: 0 8px;
+}
+
+.nav-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    color: #ccc;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 50%;
+    transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-link:hover {
+    background: #4285f4;
+    color: #fff;
+    transform: scale(1.1);
+}
+
+.nav-link.active {
+    background: #4285f4;
+    color: #fff;
+}
+
+/* Section Styling */
+.section {
+    min-height: 100vh;
+    padding: 80px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background: transparent;
+}
+
+.curved {
+    border-radius: 30px;
+    background: #252525;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Content Styling */
+.content {
+    text-align: center;
+    padding: 50px;
+    max-width: 800px;
+    background: #2a2a2a;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+.content h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #4285f4;
+    margin-bottom: 20px;
+    text-shadow: 0 0 5px rgba(66, 133, 244, 0.2);
+}
+
+.content p {
+    font-size: 1.2rem;
+    color: #ccc;
+    margin-bottom: 20px;
+}
+
+/* Project List (Stacked Layout) */
+.project-list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+/* Project Card (Styled like the second attachment) */
+.project-card {
+    background: linear-gradient(135deg, #2a2a2a 0%, #1e1e1e 100%);
+    border-radius: 15px;
+    padding: 25px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+}
+
+.project-date {
+    font-size: 0.9rem;
+    color: #bbb;
+    margin-bottom: 15px;
+}
+
+.project-card h3 {
+    font-size: 1.8rem;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.project-card p {
+    font-size: 1.1rem;
+    color: #bbb;
+    margin-bottom: 20px;
+}
+
+.project-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+    color: #bbb;
+}
+
+.avatars {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.avatars i {
+    font-size: 1.2rem;
+    color: #fbbc05;
+}
+
+.avatars .add-more {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    background: #4285f4;
+    color: #fff;
+    border-radius: 50%;
+    font-size: 0.8rem;
+}
+
+.btn-countdown {
+    background: #3a3a3a;
+    padding: 5px 10px;
+    border-radius: 10px;
+    color: #bbb;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.btn-countdown:hover {
+    background: #4285f4;
+    color: #fff;
+}
+
+/* Color Variations for Project Cards */
+.green {
+    background: radial-gradient(ellipse at right top, #107667ed 0%, #151419 47%, #151419 100%);
+}
+
+.green .btn-countdown:hover {
+    background: #01c3a8;
+}
+
+.orange {
+    background: radial-gradient(ellipse at right top, #ffb74194 0%, #151419 47%, #151419 100%);
+}
+
+.orange .btn-countdown:hover {
+    background: #ffb741;
+}
+
+.blue {
+    background: radial-gradient(ellipse at right top, #00458f8f 0%, #151419 45%, #151419 100%);
+}
+
+.blue .btn-countdown:hover {
+    background: #1890ff;
+}
+
+/* Contact Links */
+.contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.contact-btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 20px;
+    background: #4285f4;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.contact-btn i {
+    margin-right: 10px;
+}
+
+.contact-btn:hover {
+    background: #3267d6;
+    transform: translateY(-3px);
+}
+
+/* Fade-In Animation */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.8s ease-out;
+}
+
+.fade-in.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 25px;
+    margin-top: 20px;
+    background: #2a2a2a;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.5);
+}
+
+footer i {
+    margin-right: 10px;
+    color: #fbbc05;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .content {
+        padding: 30px;
+    }
+    .content h1 {
+        font-size: 2.2rem;
+    }
+    .content p {
+        font-size: 1rem;
+    }
+    .nav {
+        flex-direction: column;
+        padding: 15px;
+    }
+    .nav ul {
+        margin-top: 15px;
+        padding: 8px 10px;
+    }
+    .nav li {
+        margin: 0 5px;
+    }
+    .nav-link {
+        width: 35px;
+        height: 35px;
+        font-size: 1rem;
+    }
+    .project-list {
+        gap: 20px;
+    }
+    .project-card {
+        padding: 15px;
+    }
+    .project-card h3 {
+        font-size: 1.5rem;
+    }
+    .project-date, .project-footer {
+        font-size: 0.8rem;
+    }
+}
